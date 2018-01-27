@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/responsive.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
+	<link rel="icon" href="images/favico.jpg" sizes="32x32">
+	<title>RompecabezasRecagardo - Responsive</title>
+	
+</head>
+<body>
+<div class="wrapper">
+	<div class="izquierda bg01">
+		<div id="titulo">
+			<h1>Rompecabezas Recargado</h1>
+		</div>
+		<div id="instrucciones">
+			 <h2>Instrucciones</h2>
+			 <ul>
+				<li>La pieza a mover esta resaltada en el Juego</li>
+				<li id="escritorio">Para Mover las piezas podes usar el Mouse o las Teclas de  las Flechas.</li>
+				<li id="moviles">Estas en un Dispositivo Móvil. Usa los controles que estan debajo del Juego, para mover las piezas</li>
+				<li>La solución está en Encontrar el orden correcto de las piezas.</li>
+				<h2>Nivel:</h2>
+				<form id="Niveles" action="">
+				  <input type="radio" name="nivel" value="facil" id="facil"><label for="facil">Fácil</label>
+				  <input type="radio" name="nivel" value="medio" id="medio"><label for="medio">Medio</label>
+				  <input type="radio" name="nivel" value="dificil" id="dificil"><label for="dificil">Dificil</label>
+				 </form>
+				 <div id="contadores">
+					 <p>Piezas por Lado: <input type="text" id="cantidadPiezasPorLado" value=""></p>
+					 <p>Movimientos Disponibles: <input type="text" id="contadorDeMovimientos" value="" ></p>
+				 </div>
+				<button id="btnReIniciar" class="btns">REINICIAR</button>
+				<button id="btnInicio" class="btns">INICIAR</button>
+				<button id="btnMezclar" class="btns">SOLO MEZCLAR</button>
+			 </ul>
+		</div>
+	</div><!--Cierra .izquierda-->
+	<div class="medio bg01">
+		<canvas id="canvas" width="600" height="600"></canvas>
+		<div id="temporizador">
+			<span>Tiempo</span><br>
+			<span id="minutos">00</span>:<span id="segundos">00</span>
+		</div>
+	</div><!--Cierra .medio-->
+	<div id="imgs">
+		<h3>Elegí una Imagen y luego selecciona un
+		<br> Nivel para Jugar, finalmente dale Click
+		<br>al boton de INICIAR para comenzar el Juego.</h3>
+		 <ul class="imgs">
+		   <li> <img id="r1" class="circulo" src="images/r1.jpg" alt="r1"></li>
+		   <li> <img id="r2" class="circulo" src="images/r2.jpg" alt="r2"></li>
+		   <li> <img id="r3" class="circulo" src="images/r3.jpg" alt="r3"></li>
+		   <li><img id="r4" class="circulo" src="images/r4.jpg" alt="r4"></li>
+		   <li><img id="r5" class="circulo" src="images/r5.jpg" alt="r5"></li>
+		 </ul>
+	</div>
+	<div id="controles">
+		<div id="izquierda"></div>
+		<div id="derecha"></div>	
+		<div id="arriba"></div>
+		<div id="abajo"></div>
+	</div>
+
+	<footer>
+		<div class="copy">
+          <p>&copy;2018<br>
+          Todos los derechos reservados</p>
+        </div><!-- Cierra .copy-->
+        <div class="autor">
+          <p>Autor: <a href="#">David Dam</a><br>
+          Desarrollador Front-End</p>
+        </div><!-- Cierra .autor-->
+	</footer><!--Cierra .derecha-->
+	
+</div><!--Cierra .wrapper-->
+<script src="js/juego.min.js"></script>
+<script src="js/pieza.min.js"></script>
+<script src="js/scripts.min.js"></script>
+
+
+</body>
+</html>

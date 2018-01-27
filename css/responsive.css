@@ -1,0 +1,444 @@
+/*responsive.css*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.bg01{ background: #E1BEE7; }/*Fondo Titulo e Instrucciones*/
+
+body{
+	font-family: 'Kavivanar', cursive;
+	font-size: 1.2em;
+	background-color: darkmagenta;
+}
+
+.wrapper{
+	padding-top: 5vh;
+	/* margin-top: 10vh; */
+	max-width: 940px;
+	margin: auto;
+	font-size: 2em;
+	box-sizing: border-box;
+}
+
+.header{
+	background-color: darkmagenta;
+	/* border-radius: 5px 5px 0 0; */
+	font-size: 2rem;
+	text-align: center;
+	height: 5vh;
+
+
+}
+
+.izquierda{
+	float: left;
+	width: 340px;
+	height: 600px;
+}
+
+.izquierda ul{
+	list-style-type: none;
+}
+
+.izquierda li::before {
+	content: "• ";
+	color: #9C27B0;
+  }
+
+/* Parte del Texto para las instrucciones del juego */
+#titulo{
+	background:#9C27B0;/*Purple*/
+	color: #fff;
+	font-size: 60%;
+	border-radius: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	margin-top: 0px;
+  
+  }
+  
+  #instrucciones{
+	font-size: 40%;
+	color:#212121;
+	font-weight: bold;
+	padding-left: 25px;
+  }
+  
+  #instrucciones h2{
+	color:#9C27B0;
+	margin: 0;
+  }
+  
+  #instrucciones li{
+	margin-bottom:0;
+	margin-top: 5px;
+  }
+  #contadores p{
+	margin-top: 5px;
+	margin-bottom: 0px;
+   }
+   #contadores input{
+	 background: transparent;
+	 width: 30px;
+	 text-align: center;
+	 font-weight: bold;
+	 border-style: none;
+	 font-size: 150%;
+	 }
+	 
+   #moviles{
+	display: none;
+	}
+	
+	#Niveles input[type= "radio"]{
+		display: none;
+	}
+
+	#Niveles label{
+		/* color:#9C27B0; */
+		color: #FAF8EF;
+		background-color: #9c27b0;
+		padding: 5px 15px 5px 30px;
+		display:inline-block;
+		position: relative;
+		font-size: 90%;
+		border-radius: 3px;
+		cursor: pointer;
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+
+	#Niveles label:hover {
+		background: rgba(156,39,176, 0.3);
+		color: #FAF8EF;
+	}
+
+	#Niveles label:before {
+		content: "";
+		width: 12px;
+		height: 12px;
+		display: inline-block;
+		background: none;
+		border: 3px solid #fff;
+		border-radius: 50%;
+		position: absolute;
+		left: 8px;
+	}
+	#Niveles input[type= "radio"]:checked + label{
+		padding: 5px 15px;
+		border-radius: 2px;
+		color: #FAF8EF;
+		background-color: #9c27b0;
+	}
+
+	#Niveles input[type= "radio"]:checked + label:before{
+	display: none;
+	}
+
+
+  /*======================================================================================*/
+/* Termina Parte del Texto para las instrucciones del juego */
+
+
+.medio{
+	float: left;
+	width: 600px;
+	height: 600px;
+	position: relative;
+	border: 1px solid #9C27B0;
+}
+
+/* canvas{
+	background-image: url(../images/r4.jpg);
+	background-size:cover;
+} */
+
+
+.medio button{
+	display:block;
+	position: relative;
+	margin:5px 0;
+	padding:10px;
+	cursor:pointer;
+}
+
+#temporizador{
+	position:absolute;
+	top:0;
+  right: 0;
+  padding:20px;
+  color: #FAF8EF;
+  font-weight: bold;
+  font-size: 60%;
+}
+/*======================================================================================*/
+#btnMezclar {display: none;}
+.btns {
+	font-family: Arial, sans-serif;
+	font-size: 80%;
+	margin-top: 5px;
+	width: 45%;
+	padding: 10px;
+	background-color: #9C27B0;
+	color:#fff;
+	border:1px solid #fff;
+	border-radius: 10px;
+   }
+  
+.btns:hover { 
+	background: #E1BEE7;
+	color: #9C27B0;
+	font-weight: bold;
+	border:1px solid #9C27B0;
+  }
+  
+/*==========================================================================================================0*/
+
+
+/* ------------------------------------- Eleccion de imagen -------------------------------------------------------- */
+
+#imgs {
+	clear:both;
+	display: block;
+	margin:auto;
+	position: relative;
+	z-index: 1000;
+	/* display: none; */
+  }
+  
+  #imgs h3 {
+	font-size: 90%;
+	font-weight: bold;
+	text-align: center;
+	color:#fff;
+	position: absolute;
+	top: -400px;
+	left: 330px;
+	z-index: 5000;
+  }
+  
+  #imgs ul{
+	list-style-type: none;
+}
+  
+  .imgs {
+	display: flex;
+	align-items:center;
+	flex-wrap: wrap;
+	position: absolute;
+	/* top: -150px; */
+	top: -120px;
+	
+	
+   }
+   .imgs li {
+	 width: 20%;
+	 height: 20%;
+	 margin: 0;
+	 align-items: flex-start;
+   }
+   .imgs img {
+	width: 100%;
+	cursor: pointer;
+   }
+   .circulo:hover{
+	transform: rotateZ(40deg);
+	border-radius: 50%;
+  }
+/* -----------------------------------------------------------------------------------------------------------------------  */ 
+footer{
+	position:relative;
+	clear:both;
+	width: 100%;
+	font-size: 35%;
+	background-color:#9C27B0;/*Purple*/
+	text-align:center;
+	box-sizing: border-box;
+}
+
+footer .copy {
+	float: left;
+	box-sizing: border-box;
+	width: 50%;
+	margin-left: 30px;
+	/* margin-right: 20px; */
+  }
+  
+footer.autor{
+	float: left;
+	text-align: right;
+	width: 50%;
+	right: 0;
+	/* padding-right: 10px; */
+	
+  }
+  
+footer .autor a{
+	list-style: none;
+	text-decoration: none;
+	color: #fff;
+	}
+
+/*=============================================
+PANTALLA DISPOSITIVOS TOUCH
+=============================================*/
+
+#controles{
+	display:none;
+}
+
+@media (max-width: 768px){
+	.header{background-color: blue}
+	.izquierda{float: none;	width: 100%;height: auto}
+	.medio{	float: none;width: 100%; height: 80vh}
+	canvas{	width: 100%;height: 60vh}
+	#imgs{float: none; width: 100%;height: 100%;}
+	footer{float: none;	width: 100%;text-align: center;height: auto;}
+	#izquierda{
+		position:absolute;
+		left:20px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(270deg);
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;
+	}
+
+	#derecha{
+		position:absolute;
+		/* left:180px; */
+		right: 20px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;
+	}
+
+	#arriba{
+		position:absolute;
+		/* right:90px; */
+		left: 110px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		background:url(../images/flecha.jpg);
+		background-size: cover;	
+	}
+
+	#abajo{
+		position:absolute;
+		/* right:20px; */
+		left: 190px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;	
+	}
+}
+/*Orientacion:
+	1. Landscape - Mas ancho que alto
+	2. Portrait - Mas alto que ancho
+*/
+/* @media (orientation: portrait){
+	.header{background-color: black;}
+} */
+
+/*Cuando sea landscape y ADEMAS tamaño de pantalla menor a 768px*/
+/* @media (orientation: landscape) and (max-width: 768px){
+	.header{background-image: radial-gradient(purple, white);border: 10px solid peru;height: 100vh;}
+} */
+@media (max-width: 480px){
+	.header{background-color: white;}
+	.izquierda{	float: none;width: 100%;height: auto;}
+	#escritorio{display: none}
+	#moviles{display: block}
+	.medio{	float: none;width: 100%}
+	canvas{	width: 100%; height:60vh}
+	#imgs{float: none; width: 100%;height: 100%}
+	#imgs h3 {font-size: 55%; top: -270px;left: 0;z-index: 5000}
+	footer{float: none;	width: 100%;text-align: center;height: auto;font-size: 30%;}
+	/* #controles{display: block} */
+	#izquierda{
+		position:absolute;
+		left:20px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(270deg);
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;
+	}
+
+	#derecha{
+		position:absolute;
+		/* left:180px; */
+		right: 20px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;
+	}
+
+	#arriba{
+		position:absolute;
+		/* right:90px; */
+		left: 110px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		background:url(../images/flecha.jpg);
+		background-size: cover;	
+	}
+
+	#abajo{
+		position:absolute;
+		/* right:20px; */
+		left: 190px;
+		bottom:-360px;
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		background:url(../images/flecha.jpg);
+		background-size: cover;	
+	}
+}
